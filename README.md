@@ -63,25 +63,9 @@ DualNumber(92.0,32.0)
 julia> D(x -> 3*x^2+2*x+7)(5) # derivative evaluated at 5
 32.0
 
-julia> A = randn(3,3)
-3x3 Array{Float64,2}:
-  0.235806   0.801981  -0.204849
- -0.69821   -0.463073   0.667738
-  0.001391  -0.337116  -0.600577
+julia> A = randn(3,3); B = randn(3,3);
 
-julia> B = randn(3,3)
-3x3 Array{Float64,2}:
-  0.773917    0.785002  -0.25077
- -0.0327547   0.930431  -0.742221
-  1.43265    -1.87466   -1.8494
-
-julia> f(x) = A*x
-# methods for generic function f
-f(x) at none:1
-
-julia> g(x) = B*x
-# methods for generic function g
-g(x) at none:1
+julia> f(x) = A*x; g(x) = B*x;
 
 julia> D(x -> f(g(x)))([1;2;3]) # matrix derviatives FOR FREE
 3x3 Array{Float64,2}:
