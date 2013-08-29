@@ -3,7 +3,7 @@ importall Base
 type DualNumber <: Number
     real::Float64
     eps::Float64
-    DualNumber(x::Real) = new(convert(Float64,x),0.)
+    DualNumber(x::Real) = new(x,0.)
     DualNumber(x::Real,y::Real) = new(convert(Float64,x),convert(Float64,y))
 end
 
